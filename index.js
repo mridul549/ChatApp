@@ -6,8 +6,8 @@ const date    = require(__dirname + "/date.js");
 
 const app=express();
 app.set('view engine','ejs');
-app.set('views',path.join(__dirname,'..','client','views'));
-app.use(express.static('../client/public'))
+app.set('views',path.join(__dirname,'views'));
+app.use(express.static('public'))
 
 const day=date.getDate();
 const time=date.getTime();
