@@ -1,4 +1,4 @@
-// Node server which will handle socket io connectionskk
+// Node server which will handle socket io connections
 const express = require('express');
 const io      = require('socket.io')(8000)
 const path    = require('path')
