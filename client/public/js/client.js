@@ -1,23 +1,34 @@
-const express = require('express');
 const socket = io('http://localhost:8000',{transports:['websocket']})
-
-const app = express();
-
-app.use(express.static('public'))
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('msgInp');
 const messageContainer = document.querySelector('.container');
-var audio = new Audio('iphone.mp3');
+var audio = new Audio('sounds/iphone.mp3');
+
+function getTime() {
+    const today = new Date();
+    var hours = today.getHours();
+    var mins = today.getMinutes();
+    return `${hours}:${mins}`
+}
 
 const append = (message,position)=>{
     console.log(message);
     const messageElement = document.createElement('div');
+
     messageElement.innerText=message;
     messageElement.classList.add('message');
     messageElement.classList.add(position);
-    messageContainer.append(messageElement);
 
+    if(position!=='centre'){
+        const timeEle = document.createElement('p');
+        timeEle.innerText=getTime();
+        timeEle.classList.add('time');
+        messageElement.classList.add('text');
+        messageElement.append(timeEle);
+    } 
+    
+    messageContainer.append(messageElement);
     if(position==='left'){
         audio.play();
     }

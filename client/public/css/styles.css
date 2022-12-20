@@ -11,9 +11,8 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-p {
+.today {
     margin-top: 12px;
-    font-size: 30px;
     text-align: center;
     font-weight: 500;
 }
@@ -27,14 +26,16 @@ p {
     margin: 20px auto 10px;
     border-radius: 10px;
     overflow-y: auto;
+    font-size: 15px;
 }
 
 .message {
     background-color:#CCF3EE;
-    width: 24%;
+    width: max-content;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
     padding: 10px;
     margin: 17px 12px;
-    border: 2px soild lavender;
     border-radius: 10px;
 }
 
@@ -47,6 +48,7 @@ p {
 .right {
     float: right;
     clear: both;
+    margin: 10px 0;
     background-color: #F5F0BB;
 }
 
@@ -56,6 +58,16 @@ p {
     background-color: transparent;
     font-weight: 500;
     text-align: center;
+}
+
+.text{
+    margin: 0;
+}
+
+.time {
+    text-align: right;
+    font-size: 12px;
+    margin: 2px 1px 0;
 }
 
 /* ----------- Sending messages form elements ----------- */

@@ -8,10 +8,10 @@ exports.getDate = function () {
     return today.toLocaleDateString("en-US",options);
 }
 
-exports.getDay = function() {
+exports.getTime = function() {
     const today = new Date();
-    const options = {
-        weekday: "long",
-    }
-    return today.toLocaleDateString("en-US",options);
+    var hours = today.getHours();
+    var mins = today.getMinutes();
+    
+    return hours+":"+mins;
 }

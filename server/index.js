@@ -7,10 +7,10 @@ const date    = require(__dirname + "/date.js");
 const app=express();
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'..','client','views'));
-// app.use('/client',express.static(path.join(__dirname,'public')));
-app.use(express.static('client/public/css'))
+app.use(express.static('../client/public'))
 
 const day=date.getDate();
+const time=date.getTime();
 const users = {};
 
 app.get('/', function(req,res){
