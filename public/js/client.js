@@ -3,7 +3,7 @@ const socket = io('https://chat-app-gxod.onrender.com',{transports:['websocket']
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('msgInp');
 const messageContainer = document.querySelector('.container');
-var audio = new Audio('sounds/iphone.mp3');
+var audio = new Audio('sounds/whistle.mp3');
 // f
 function getTime() {
     const today = new Date();
