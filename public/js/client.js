@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8000',{transports:['websocket']})
+const socket = io('https://chat-app-gxod.onrender.com',{transports:['websocket']})
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('msgInp');

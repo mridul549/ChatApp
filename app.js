@@ -10,7 +10,6 @@ app.set('views',path.join(__dirname,'views'));
 app.use(express.static(path.join(__dirname,'public')));
 
 const day=date.getDate();
-const time=date.getTime();
 const users = {};
 
 app.get('/', function(req,res){
